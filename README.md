@@ -34,11 +34,11 @@ Finish time: 4:00 PM
 
 Actual time needed to complete: 15 min
 
-Name of feature: ________________________________
+Name of feature: Storage
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 2 hours
 
-Start time: _____
+Start time: 4:05 PM
 
 Finish time: _____
 
