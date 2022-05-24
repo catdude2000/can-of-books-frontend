@@ -6,7 +6,7 @@
 import React from 'react';
 import Books from './Books';
 
-class ShowBooks extends React.Component {
+class BooksForm extends React.Component {
 	handleSubmission = (evt) => {
 		evt.preventDefault();
 		const location = evt.target.location.value;
@@ -28,4 +28,4 @@ class ShowBooks extends React.Component {
 	}
 }
 
-export default ShowBooks;
+export default BooksForm;
