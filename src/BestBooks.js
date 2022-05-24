@@ -13,7 +13,8 @@ class BestBooks extends React.Component {
     evt.preventDefault()
     const location = evt.target.location
   }
-  /* TODO: Make a GET request to your API to fetch all the books from the database  */
+  // TODO: Make a GET request to your API to fetch all the books from the database
+
   fetchBooks = async (location = null) => {
     const SERVER='http://localhost3001'
     let apiURL = `${SERVER}/books`;
@@ -34,7 +35,7 @@ class BestBooks extends React.Component {
 
   render() {
 
-    /* TODO: render all the books in a Carousel */
+    // TODO: render all the books in a Carousel
 
     return (
       <>
