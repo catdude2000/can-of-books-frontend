@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import BooksForm from './BooksForm';
 
 class BestBooks extends React.Component {
   constructor(props) {
@@ -9,14 +10,11 @@ class BestBooks extends React.Component {
     }
   }
 
-  handleLocationSubmit = (evt) => {
-    evt.preventDefault()
-    const location = evt.target.location
-  }
+ 
   // TODO: Make a GET request to your API to fetch all the books from the database
 
   fetchBooks = async (location = null) => {
-    const SERVER='http://localhost3001'
+    const SERVER='http://localhost:3001'
     let apiURL = `${SERVER}/books`;
     if(location){
       apiURL += `?location=${location}`
@@ -33,12 +31,20 @@ class BestBooks extends React.Component {
     this.fetchBooks();
   }
 
+  handleLocationSubmit = (evt) => {
+    evt.preventDefault();
+    const location = evt.target.location.value;
+    console.log(`App.handleLocationSubmit() location: ${location}`);
+    this.fetchBooks(location);
+  };
+
   render() {
 
     // TODO: render all the books in a Carousel
 
     return (
       <>
+        <BooksForm book={this.state.books} fetchBooks={this.fetchBooks}/>
         <h2>My Essential Lifelong Learning &amp; Formation Shelf</h2>
 
         {this.state.books.length ? (
